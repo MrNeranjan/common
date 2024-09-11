@@ -1,18 +1,14 @@
 //;
 
-interface Color {
-    red: number;
-    green: number;
-    blue: number;
-}
+export * from './errors/badRequestError';
+export * from './errors/customErrorAbstract';
+export * from './errors/dbConnectionError';
+export * from './errors/notAuthorized';
+export * from './errors/notFoundError';
+export * from './errors/reqValidationError';
 
 
-const color = {
-    red: 25,
-    green: 0,
-    blue: 0
-}
-
-console.log(color.red); 
-
-export default color;
+export * from './middleware/currentUser';
+export * from './middleware/errorHandler';
+export * from './middleware/requireAuth';
+export * from './middleware/validateRequest';
